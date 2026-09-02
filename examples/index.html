@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scroll Collections</title>
+  <link rel="stylesheet" href="./shared.css">
+</head>
+<body>
+  <div class="sc-progress-shell"><div class="sc-progress" data-scroll-progress role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100"></div></div><div class="sc-percent" data-scroll-percentage aria-live="polite">0%</div>
+  <div class="cursor-dot" data-scroll-cursor></div>
+  <div class="cursor-follow" data-scroll-cursor-follower></div>
+
+  <nav class="nav">
+    <a href="#reveal">Reveal</a><a href="#horizontal">Horizontal</a><a href="#flip">Sticky flip</a><a href="#velocity">Velocity</a><a href="./01-cursor-progress.html">Example 1</a><a href="./02-reveal-elements.html">Example 2</a><a href="./03-horizontal-sections.html">Example 3</a><a href="./04-sticky-flip.html">Example 4</a><a href="./05-full-story.html">Example 5</a>
+  </nav>
+
+  <header class="hero" data-scroll-section="hero" id="hero">
+    <div class="eyebrow">Dependency-free ES2023 library</div>
+    <h1>SCROLL COLLECTIONS</h1>
+    <p>Reusable scroll interactions for custom cursor experiences, page percentage, reveal animations, horizontal storytelling, sticky flipping content, scroll velocity and active section tracking.</p>
+  </header>
+
+  <section class="section" id="reveal" data-scroll-section="reveal">
+    <div class="eyebrow">01 / IntersectionObserver</div>
+    <h2 data-scroll-reveal>Reveal anything.</h2>
+    <div class="grid">
+      <article class="card" data-scroll-reveal="left"><strong>Words</strong><p>Headings and paragraph blocks reveal only when useful.</p></article>
+      <article class="card" data-scroll-reveal><strong>Shapes</strong><p>Animate CSS or SVG elements without coupling the library to a design system.</p></article>
+      <article class="card" data-scroll-reveal="right"><strong>Interfaces</strong><p>Cards, dashboards, mockups and nested layouts can participate.</p></article>
+    </div>
+  </section>
+
+  <section class="horizontal-section" id="horizontal" data-horizontal-scroll data-scroll-section="horizontal">
+    <div class="horizontal-sticky">
+      <div class="horizontal-track" data-horizontal-track>
+        <article class="panel"><span class="n">01</span><h2>Vertical wheel.</h2><p>The page keeps moving vertically while the story travels left and right.</p></article>
+        <article class="panel"><span class="n">02</span><h2>Horizontal canvas.</h2><p>Ideal for portfolios, timelines, product journeys and sequential visual stories.</p></article>
+        <article class="panel"><span class="n">03</span><h2>Native scroll.</h2><p>No wheel hijacking. Progress is derived from the section position.</p></article>
+        <article class="panel"><span class="n">04</span><h2>Responsive.</h2><p>The track distance is recalculated on resize.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="flip-stage" id="flip" data-sticky-flip data-flip-turns="1.5" data-flip-hold="3" data-scroll-section="flip">
+    <div class="flip-sticky">
+      <div class="flip-card" data-flip-target>
+        <div class="flip-face"><div class="eyebrow">Front</div><h2>Keep scrolling.</h2><p>The element remains sticky long enough to read while its progress controls a 3D flip.</p></div>
+        <div class="flip-face flip-back"><div class="eyebrow">Back</div><h2>The second side.</h2><p>Use this for explanations, before and after states, product cards or narrative reveals.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="velocity" data-scroll-section="velocity">
+    <div class="eyebrow">Scroll velocity</div>
+    <div class="velocity-word">MOMENTUM</div>
+    <div class="shape-field">
+      <div class="shape circle"></div><div class="shape square"></div><div class="shape pill"></div>
+    </div>
+  </section>
+
+  <section class="section" id="transform" data-scroll-section="transform">
+    <div class="eyebrow">Viewport transform mapping</div>
+    <h2 data-scroll-animate data-from-x="-120" data-to-x="120" data-from-rotate="-4" data-to-rotate="4">Scroll mapped animation.</h2>
+    <div class="grid">
+      <article class="card"><strong data-scroll-counter="120" data-counter-suffix="+">0</strong><p>Possible reusable combinations without a framework.</p></article>
+      <article class="card" data-scroll-animate data-from-y="90" data-to-y="-90" data-from-scale="0.8" data-to-scale="1.08"><strong>Transform</strong><p>Translate, scale, rotate and opacity can be mapped to viewport progress.</p></article>
+      <article class="card" data-scroll-animate data-from-x="100" data-to-x="-100" data-from-opacity="0.2" data-to-opacity="1"><strong>Custom values</strong><p>Every element can define its own start and end values in markup.</p></article>
+    </div>
+  </section>
+
+  <footer class="footer">Scroll Collections 1.0.0</footer>
+
+  <script type="module">
+    import { ScrollCollections } from "../src/index.js";
+    new ScrollCollections().start();
+  </script>
+</body>
+</html>

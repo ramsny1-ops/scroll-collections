@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Horizontal Sections</title><link rel="stylesheet" href="./shared.css"></head><body>
+<header class="hero"><div class="eyebrow">Example 03</div><h1>LEFT / RIGHT STORY</h1><p>Scroll normally downward. The sticky viewport converts section progress into horizontal track movement.</p></header>
+<section class="horizontal-section" data-horizontal-scroll><div class="horizontal-sticky"><div class="horizontal-track" data-horizontal-track>
+<article class="panel"><span class="n">A</span><h2>Start</h2><p>The first panel begins on screen.</p></article>
+<article class="panel"><span class="n">B</span><h2>Move left</h2><p>The track is translated rather than the page being forced sideways.</p></article>
+<article class="panel"><span class="n">C</span><h2>Keep context</h2><p>The viewport remains sticky while there is horizontal distance to consume.</p></article>
+<article class="panel"><span class="n">D</span><h2>Finish naturally</h2><p>When the track reaches the end, vertical document scrolling continues.</p></article>
+<article class="panel"><span class="n">E</span><h2>Responsive</h2><p>Resize recalculates the exact scroll distance.</p></article>
+</div></div></section>
+<section class="section"><h2>Back to normal flow.</h2><p>Horizontal storytelling is contained to the marked section.</p></section>
+<script type="module">import { HorizontalScroll } from "../src/index.js"; new HorizontalScroll().start();</script>
+</body></html>

@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cursor and Progress</title><link rel="stylesheet" href="./shared.css"></head><body>
+<div class="sc-progress-shell"><div class="sc-progress" data-scroll-progress role="progressbar" aria-label="Scroll progress" aria-valuemin="0" aria-valuemax="100"></div></div><div class="sc-percent" data-scroll-percentage aria-live="polite">0%</div>
+<div class="cursor-dot" data-scroll-cursor></div><div class="cursor-follow" data-scroll-cursor-follower></div>
+<header class="hero"><div class="eyebrow">Example 01</div><h1>CURSOR + PROGRESS</h1><p>Move the pointer over links and scroll through the page. The follower eases behind the pointer while the fixed bar reports total document progress.</p><a href="#cards" data-cursor-hover>Explore the section</a></header>
+<section class="section" id="cards"><div class="grid"><article class="card"><strong>Pointer dot</strong><p>Immediate pointer position.</p></article><article class="card"><strong>Follower</strong><p>requestAnimationFrame with interpolation creates the delayed ring.</p></article><article class="card"><strong>Progress</strong><p>The library maps scrollY to the full scrollable document distance.</p></article></div></section>
+<section class="section"><h2>Enough content to scroll.</h2><p>Custom cursors should be disabled for coarse pointer devices and should never remove normal keyboard focus. This example keeps the effect pointer-specific.</p></section>
+<section class="section"><h2>Keep interfaces readable.</h2><p>The cursor is decoration. Buttons and links remain real native elements.</p></section>
+<script type="module">import { ProgressBar, CustomCursor } from "../src/index.js"; new ProgressBar().start(); new CustomCursor().start();</script>
+</body></html>

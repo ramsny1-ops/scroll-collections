@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reveal Elements</title><link rel="stylesheet" href="./shared.css"></head><body>
+<header class="hero"><div class="eyebrow">Example 02</div><h1 data-scroll-reveal>REVEAL ELEMENTS</h1><p data-scroll-reveal>IntersectionObserver handles visibility so off-screen elements do not need continuous per-frame geometry calculations.</p></header>
+<section class="section"><div class="grid"><article class="card" data-scroll-reveal="left"><strong>From left</strong></article><article class="card" data-scroll-reveal><strong>From below</strong></article><article class="card" data-scroll-reveal="right"><strong>From right</strong></article></div></section>
+<section class="section"><h2 data-scroll-reveal>Complex markup works too.</h2><article class="card" data-scroll-reveal><div class="eyebrow">Nested content</div><strong>Article component</strong><p>A reveal target can contain headings, links, images, controls, SVG, or other child nodes. The library only owns the visibility class.</p><a href="#">Read more</a></article></section>
+<section class="section"><div class="shape-field" data-scroll-reveal><div class="shape circle"></div><div class="shape square"></div><div class="shape pill"></div></div></section>
+<script type="module">import { Reveal } from "../src/index.js"; new Reveal({ once: false }).start();</script>
+</body></html>

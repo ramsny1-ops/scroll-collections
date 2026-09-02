@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sticky Flip</title><link rel="stylesheet" href="./shared.css"></head><body>
+<header class="hero"><div class="eyebrow">Example 04</div><h1>READ. FLIP. CONTINUE.</h1><p>The section reserves enough vertical scroll distance for reading while a sticky element rotates according to progress.</p></header>
+<section class="flip-stage" data-sticky-flip data-flip-turns="2" data-flip-hold="4"><div class="flip-sticky"><div class="flip-card" data-flip-target>
+<div class="flip-face"><div class="eyebrow">Side one</div><h2>The problem</h2><p>Fast scroll animations often disappear before the visitor can understand the content. Sticky scroll space decouples reading time from the physical height of the card.</p></div>
+<div class="flip-face flip-back"><div class="eyebrow">Side two</div><h2>The explanation</h2><p>The library maps the reserved section progress to rotation. Use data-flip-turns for rotation count and data-flip-hold for the amount of scroll space.</p></div>
+</div></div></section>
+<section class="section"><h2>Continue below.</h2><p>The document returns to normal flow after the sticky narrative ends.</p></section>
+<script type="module">import { StickyFlip } from "../src/index.js"; new StickyFlip().start();</script>
+</body></html>
